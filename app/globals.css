@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fbf8f1;
+  --background: #f7f5f1;
   --surface: #ffffff;
-  --surface-soft: #edf6fc;
-  --surface-blue: #dceefa;
-  --foreground: #17314a;
-  --muted: #5d6d7a;
-  --navy: #0b3558;
-  --navy-deep: #062844;
-  --blue: #286a9f;
-  --blue-hover: #1f5785;
-  --blue-light: #cae7f7;
+  --surface-soft: #f4eee8;
+  --surface-blue: #fff0e5;
+  --foreground: #272321;
+  --muted: #6f6862;
+  --navy: #262220;
+  --navy-deep: #171513;
+  --blue: #f36f21;
+  --blue-hover: #d95710;
+  --blue-light: #ffd1b6;
   --text-on-dark: #ffffff;
   --muted-on-dark: #d9e8f1;
   --subtle-on-dark: #b8d0df;
-  --focus: #286a9f;
-  --border: #cedde7;
-  --border-warm: #e8e1d5;
+  --focus: #e94c75;
+  --border: #ddd6d0;
+  --border-warm: #e9e2dc;
   --container-width: 1240px;
   --radius-sm: 10px;
   --radius-md: 16px;
   --radius-lg: 28px;
-  --shadow-sm: 0 10px 28px rgba(11, 53, 88, 0.08);
-  --shadow-lg: 0 24px 70px rgba(11, 53, 88, 0.16);
+  --shadow-sm: 0 10px 28px rgba(38, 34, 32, 0.08);
+  --shadow-lg: 0 24px 70px rgba(38, 34, 32, 0.18);
 }
 
 @theme inline {
@@ -71,7 +71,7 @@ textarea {
 
 ::selection {
   background: var(--blue);
-  color: var(--text-on-dark);
+  color: #171513;
 }
 
 .eyebrow {
@@ -96,7 +96,7 @@ textarea {
 
 .field:focus {
   border-color: var(--blue);
-  box-shadow: 0 0 0 3px rgba(40, 106, 159, 0.16);
+  box-shadow: 0 0 0 3px rgba(243, 111, 33, 0.16);
   outline: none;
 }
 

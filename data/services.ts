@@ -1,44 +1,51 @@
 export const services = [
   {
-    title: "Regular House Cleaning",
+    title: "House Washing",
     description:
-      "Dependable recurring cleaning to help keep kitchens, bathrooms, bedrooms, living areas, and shared spaces fresh and comfortable.",
-    image: "/house-cleaning.png",
-    alt: "Warm residential kitchen with a clean counter and neatly folded blue cloths",
+      "Remove dirt, algae, mildew, and buildup from siding and exterior surfaces without compromising the finish.",
+    image: "/house_1_after.jpg",
+    alt: "Freshly washed light-colored house exterior with clean siding",
   },
   {
-    title: "Apartment Cleaning",
+    title: "Roof Washing",
     description:
-      "Detail-oriented cleaning for apartments and condos, with the scope tailored to your space, schedule, and priorities.",
-    image: "/apartment-cleaning.png",
-    alt: "Bright, tidy apartment living room with an open kitchen",
+      "Professional roof cleaning designed to remove dark streaks, algae, and organic growth while protecting roofing materials.",
+    image: "/work_1.jpg",
+    alt: "Roberts Revive Services team member working carefully on a roof",
   },
   {
-    title: "Deep Cleaning",
+    title: "Concrete Cleaning",
     description:
-      "More detailed cleaning for spaces that need extra attention, seasonal resets, or a more thorough refresh.",
-    image: "/house-cleaning.png",
-    alt: "Fresh residential kitchen prepared for a detailed cleaning",
+      "Refresh driveways, sidewalks, patios, and other concrete surfaces by removing years of dirt and buildup.",
+    image: "/ad_3.jpg",
+    alt: "Driveway cleaning project showing a visibly refreshed concrete surface",
   },
   {
-    title: "Move-In / Move-Out Cleaning",
+    title: "Gutter Cleaning",
     description:
-      "Cleaning for empty or transitioning homes and apartments before moving in, after moving out, or between occupants.",
-    image: "/apartment-cleaning.png",
-    alt: "Clean apartment interior ready for a move or new occupant",
+      "Clear debris and buildup to help gutters drain properly and keep water moving away from the property.",
+    image: "/siding_1_after.jpg",
+    alt: "Clean house exterior with refreshed siding, trim, and gutters",
   },
   {
-    title: "Camper & RV Cleaning",
+    title: "Window Cleaning",
     description:
-      "Detailed interior cleaning for campers and RVs so they are ready for trips, guests, storage, or a new season.",
-    image: "/camper-rv-cleaning.png",
-    alt: "Freshly cleaned camper interior with a tidy dinette and sleeping area",
+      "Clean exterior windows for a clearer view and a sharper overall appearance.",
+    image: "/house_2_after.jpg",
+    alt: "Clean home entry and exterior windows after professional washing",
   },
   {
-    title: "Custom Cleaning Requests",
+    title: "Car Detailing",
     description:
-      "Have a particular space or priority in mind? Share the details with Domenica so she can confirm the scope and prepare a quote.",
-    image: "/house-cleaning.png",
-    alt: "Clean, comfortable home interior with thoughtful finishing details",
+      "Professional cleaning and detailing that helps restore the appearance of personal vehicles.",
+    image: "/truck_with_logo_2.jpg",
+    alt: "Clean Roberts Revive Services vehicle parked at a local property",
+  },
+  {
+    title: "Fleet Washing",
+    description:
+      "Exterior washing for work vehicles and fleets to help businesses maintain a clean, professional appearance.",
+    image: "/truck_with_logo_3.jpg",
+    alt: "Roberts Revive Services work truck representing commercial fleet washing",
   },
 ] as const;

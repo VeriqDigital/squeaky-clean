@@ -1,52 +1,47 @@
 export const faqs = [
   {
-    question: "What types of spaces do you clean?",
+    question: "What types of properties do you clean?",
     answer:
-      "Domenica cleans houses, apartments, and camper or RV interiors. Share the kind of space you have when requesting a quote.",
+      "We serve residential and commercial properties, including homes, exterior surfaces, vehicles, and work fleets.",
   },
   {
-    question: "Do you offer recurring cleaning?",
+    question: "Do I need to be home during service?",
     answer:
-      "Yes. Regular house and apartment cleaning can be scheduled at a frequency that works for both you and Domenica.",
+      "Not always. Access, water availability, and any property-specific details can be confirmed when your service is scheduled.",
   },
   {
-    question: "Do you provide deep cleaning?",
+    question: "How do I request an estimate?",
     answer:
-      "Yes. Deep cleaning is available for spaces that need extra attention, a seasonal reset, or a more thorough refresh.",
+      "Use the estimate form, call, or text us with the service you need, your location, and a few basic details about the property or vehicle.",
   },
   {
-    question: "Do you offer move-in and move-out cleaning?",
+    question: "What surfaces can you clean?",
     answer:
-      "Yes. Domenica can clean empty or transitioning homes and apartments before a move, after a move, or between occupants.",
+      "Services cover siding and exterior home surfaces, roofs, concrete, gutters, exterior windows, and vehicle exteriors. We will review the surface before confirming the job.",
   },
   {
-    question: "Do you clean campers and RVs?",
+    question: "Do you clean roofs?",
     answer:
-      "Yes. Camper and RV interior cleaning can help prepare the space for travel, guests, storage, or a new season.",
+      "Yes. Roof washing is available for dark streaks, algae, and organic buildup, with the approach based on the roofing material and condition.",
   },
   {
-    question: "Do I need to provide cleaning supplies?",
+    question: "Do you offer commercial or fleet washing?",
     answer:
-      "Cleaning supplies, product preferences, and specific arrangements can be discussed when requesting your quote.",
+      "Yes. We provide exterior cleaning for commercial properties, work vehicles, and fleets. Contact us to discuss the size and scope of the job.",
   },
   {
-    question: "How is pricing determined?",
+    question: "How often should a house be professionally washed?",
     answer:
-      "Pricing depends on the type and size of the space, its current condition, requested tasks, and cleaning frequency. Domenica reviews those details before confirming a personalized quote.",
+      "Timing depends on shade, nearby trees, weather exposure, and the amount of visible buildup. We can help you assess what makes sense for your property.",
   },
   {
-    question: "Do I need to be home during the cleaning?",
+    question: "Can you remove algae and mildew?",
     answer:
-      "Access and arrival arrangements can be discussed when scheduling so you can choose what works for your space.",
+      "We clean common exterior algae, mildew, and organic buildup. Results vary by surface, age, and staining, so we review the condition before setting expectations.",
   },
   {
-    question: "Can I request specific rooms or tasks?",
+    question: "What areas do you serve?",
     answer:
-      "Yes. Tell Domenica which rooms and tasks matter most so she can review them as part of your quote.",
-  },
-  {
-    question: "How do I request a quote?",
-    answer:
-      "Use the quote form to share a few details about your space, or call or message Domenica directly at 815-714-1432.",
+      "We are based in Donnellson and serve Lee County, Des Moines County, and surrounding Southeast Iowa communities.",
   },
 ] as const;
