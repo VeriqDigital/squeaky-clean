@@ -6,8 +6,8 @@ import { siteConfig } from "@/config/site";
 export type ModalType = "service" | "contact";
 
 const modalContent = {
-  service: { eyebrow: "Free estimate", title: "Tell Us What Needs Cleaning", submitLabel: "Send Estimate Request" },
-  contact: { eyebrow: "Get in touch", title: "Send Squeaky Clean a Message", submitLabel: "Send Message" },
+  service: { label: "Free estimate", title: "Tell Us What Needs Cleaning", submitLabel: "Send Estimate Request" },
+  contact: { label: "Get in touch", title: "Send Squeaky Clean a Message", submitLabel: "Send Message" },
 } as const;
 
 type LeadModalProps = {
@@ -30,9 +30,9 @@ const LeadModal = ({ activeModal, hasSubmitted, isSubmitting, onClose, onSubmit,
 
   return (
     <div className="fixed inset-0 z-70 flex items-center justify-center bg-(--navy-deep)/80 px-4 py-5 backdrop-blur-sm sm:py-8" role="presentation" onClick={onClose}>
-      <div role="dialog" aria-modal="true" aria-labelledby={`${activeModal}-form-title`} className="max-h-[calc(100vh-2.5rem)] w-full max-w-3xl overflow-y-auto rounded-[1.5rem] border border-(--border) bg-(--background) p-5 text-(--foreground) shadow-(--shadow-lg) sm:max-h-[calc(100vh-4rem)] sm:p-8" onClick={(event) => event.stopPropagation()}>
+      <div role="dialog" aria-modal="true" aria-labelledby={`${activeModal}-form-title`} className="max-h-[calc(100vh-2.5rem)] w-full max-w-3xl overflow-y-auto rounded-[12px] border border-(--border) bg-(--background) p-5 text-(--foreground) shadow-(--shadow-lg) sm:max-h-[calc(100vh-4rem)] sm:p-8" onClick={(event) => event.stopPropagation()}>
         <div className="mb-7 flex items-start justify-between gap-4">
-          <div><p className="eyebrow">{content.eyebrow}</p><h2 id={`${activeModal}-form-title`} className="mt-2 font-heading text-3xl font-extrabold leading-tight text-(--navy) sm:text-4xl">{content.title}</h2></div>
+          <div><p className="border-l-3 border-(--blue) pl-2 font-heading text-sm font-bold uppercase tracking-[0.1em] text-(--navy)">{content.label}</p><h2 id={`${activeModal}-form-title`} className="mt-3 font-heading text-4xl font-extrabold leading-none text-(--navy) sm:text-5xl">{content.title}</h2></div>
           <button type="button" onClick={onClose} autoFocus className="flex size-11 shrink-0 cursor-pointer items-center justify-center rounded-full border border-(--border) bg-white text-2xl leading-none text-(--navy) transition hover:border-(--blue) hover:bg-(--surface-soft) hover:text-(--blue-hover)" aria-label={`Close ${content.title.toLowerCase()} form`}><span aria-hidden="true">×</span></button>
         </div>
 
@@ -65,8 +65,8 @@ const LeadModal = ({ activeModal, hasSubmitted, isSubmitting, onClose, onSubmit,
             <Label>{isQuote ? "Message or project details" : "Message"}<textarea name="cleaningDetails" rows={5} className="field mt-2 min-h-32 resize-y" placeholder={isQuote ? "Tell us what needs cleaning, its current condition, preferred timing, or anything else that will help us review the job." : "What would you like us to know?"} /></Label>
             <p className="text-xs leading-5 text-(--muted)">Fields marked with an asterisk are required. Service details and scheduling are confirmed directly with Squeaky Clean Services.</p>
             <div className="flex flex-col-reverse gap-3 pt-1 sm:flex-row sm:justify-end">
-              <button type="button" onClick={onClose} disabled={isSubmitting} className="min-h-12 cursor-pointer rounded-full border border-(--blue) bg-white px-6 font-heading text-sm font-bold text-(--navy) transition hover:border-(--navy) hover:bg-(--surface-soft) disabled:cursor-not-allowed disabled:opacity-60">Cancel</button>
-              <button type="submit" disabled={isSubmitting} className="min-h-12 cursor-pointer rounded-full border border-(--navy) bg-(--navy) px-6 font-heading text-sm font-bold text-(--text-on-dark) transition hover:border-(--blue) hover:bg-(--blue) hover:text-(--navy-deep) disabled:cursor-not-allowed disabled:bg-(--muted)">{isSubmitting ? "Sending…" : content.submitLabel}</button>
+              <button type="button" onClick={onClose} disabled={isSubmitting} className="min-h-12 cursor-pointer rounded-[7px] border border-(--navy) bg-white px-6 font-heading text-base font-bold uppercase text-(--navy) transition hover:border-(--blue) hover:bg-(--surface-soft) disabled:cursor-not-allowed disabled:opacity-60">Cancel</button>
+              <button type="submit" disabled={isSubmitting} className="min-h-12 cursor-pointer rounded-[7px] border border-(--blue) bg-(--blue) px-6 font-heading text-base font-bold uppercase text-(--navy-deep) transition hover:border-(--blue-hover) hover:bg-(--blue-hover) hover:text-white disabled:cursor-not-allowed disabled:bg-(--muted)">{isSubmitting ? "Sending…" : content.submitLabel}</button>
             </div>
             {submitError && <p className="text-sm font-semibold text-red-700" aria-live="polite">{submitError}</p>}
           </form>

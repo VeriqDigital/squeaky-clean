@@ -5,14 +5,47 @@ import { faqs } from "@/data/faq";
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+
   return (
-    <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
-      <div><p className="eyebrow">Questions, answered</p><h2 className="mt-4 font-heading text-[clamp(2.15rem,10vw,4.25rem)] font-extrabold leading-[1.03] tracking-[-0.035em] text-(--navy)">Helpful Exterior Cleaning Details</h2><p className="mt-5 max-w-md leading-7 text-(--muted)">Every property and surface is different. We’ll confirm the specifics when reviewing your estimate.</p></div>
-      <div className="divide-y divide-(--border) border-y border-(--border)">
+    <div className="grid gap-10 lg:grid-cols-[0.62fr_1.38fr] lg:gap-18">
+      <div>
+        <h2 className="font-heading text-[clamp(3rem,4.8vw,4.75rem)] font-extrabold leading-[0.9] text-(--navy)">
+          Exterior Cleaning Questions.
+        </h2>
+        <p className="mt-6 max-w-md text-lg leading-8 text-(--muted)">
+          Every property and surface is different. We’ll confirm the specifics when reviewing your estimate.
+        </p>
+      </div>
+
+      <div className="border-t-2 border-(--navy)">
         {faqs.map((item, index) => {
           const isOpen = openIndex === index;
           const answerId = `faq-answer-${index}`;
-          return <div key={item.question}><h3><button type="button" onClick={() => setOpenIndex(isOpen ? null : index)} className="flex min-h-18 w-full cursor-pointer items-center justify-between gap-3 py-5 text-left font-heading text-base font-bold text-(--navy) transition hover:text-(--blue-hover) sm:gap-5 sm:text-lg" aria-expanded={isOpen} aria-controls={answerId}><span>{item.question}</span><span aria-hidden="true" className={`flex size-8 shrink-0 items-center justify-center rounded-full border border-(--border) bg-white text-xl font-normal text-(--blue-hover) transition-transform ${isOpen ? "rotate-45" : ""}`}>+</span></button></h3><div id={answerId} hidden={!isOpen}><p className="max-w-2xl pb-6 pr-4 leading-7 text-(--muted) sm:pr-12">{item.answer}</p></div></div>;
+
+          return (
+            <div key={item.question} className="border-b border-(--border)">
+              <h3>
+                <button
+                  type="button"
+                  onClick={() => setOpenIndex(isOpen ? null : index)}
+                  className="flex min-h-18 w-full cursor-pointer items-center justify-between gap-5 py-5 text-left font-heading text-xl font-bold leading-tight text-(--navy) transition-colors hover:text-(--blue-hover) sm:text-2xl"
+                  aria-expanded={isOpen}
+                  aria-controls={answerId}
+                >
+                  <span>{item.question}</span>
+                  <span
+                    aria-hidden="true"
+                    className={`shrink-0 text-3xl font-normal leading-none text-(--blue-hover) transition-transform ${isOpen ? "rotate-45" : ""}`}
+                  >
+                    +
+                  </span>
+                </button>
+              </h3>
+              <div id={answerId} hidden={!isOpen}>
+                <p className="max-w-2xl pb-6 pr-10 leading-7 text-(--muted)">{item.answer}</p>
+              </div>
+            </div>
+          );
         })}
       </div>
     </div>

@@ -36,7 +36,7 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <header className="sticky inset-x-0 top-0 z-50 border-b border-(--border) bg-white text-sm text-(--foreground) shadow-[0_4px_24px_rgba(38,34,32,0.08)]">
+    <header className="sticky inset-x-0 top-0 z-50 border-b border-(--border) bg-white text-sm text-(--foreground)">
       <div className="hidden bg-(--navy-deep) text-(--text-on-dark) lg:block">
         <div className="mx-auto flex h-9 max-w-(--container-width) items-center justify-between px-10 text-xs font-semibold">
           <p>{siteConfig.location.serviceAreaLabel}</p>
@@ -72,8 +72,8 @@ const Navbar = () => {
           <span className="hidden max-w-28 font-heading text-sm font-extrabold leading-tight text-(--navy) min-[390px]:block">Squeaky Clean<br />Services</span>
         </Link>
         <div className="flex items-center gap-2">
-          <button type="button" onClick={() => modal.openModal(primaryCta.modal)} className="min-h-11 cursor-pointer rounded-full border border-(--navy) bg-(--navy) px-4 font-heading text-xs font-extrabold text-(--text-on-dark) transition hover:bg-(--blue) hover:text-(--navy) sm:px-5 sm:text-sm">Estimate</button>
-          <button type="button" className="flex size-11 items-center justify-center rounded-full border border-(--border) text-(--navy)" aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"} aria-expanded={isMenuOpen} aria-controls="mobile-navigation-menu" onClick={() => setIsMenuOpen((value) => !value)}>
+          <button type="button" onClick={() => modal.openModal(primaryCta.modal)} className="min-h-11 cursor-pointer rounded-[7px] border border-(--blue) bg-(--blue) px-4 font-heading text-sm font-bold uppercase text-(--navy-deep) transition hover:bg-(--blue-hover) hover:text-white sm:px-5">Estimate</button>
+          <button type="button" className="flex size-11 items-center justify-center rounded-[7px] border border-(--border) text-(--navy)" aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"} aria-expanded={isMenuOpen} aria-controls="mobile-navigation-menu" onClick={() => setIsMenuOpen((value) => !value)}>
             <span className="grid gap-1.5" aria-hidden="true">
               <span className={`block h-0.5 w-5 rounded-full bg-current transition-transform ${isMenuOpen ? "translate-y-2 rotate-45" : ""}`} />
               <span className={`block h-0.5 w-5 rounded-full bg-current transition-opacity ${isMenuOpen ? "opacity-0" : ""}`} />
@@ -96,8 +96,8 @@ const Navbar = () => {
               )}
             </nav>
             <div className="mx-auto mt-4 grid max-w-xl gap-3 min-[390px]:grid-cols-2">
-              <a href={siteConfig.contact.smsHref} className="min-h-12 content-center rounded-full border border-(--blue) bg-white text-center font-heading text-sm font-bold text-(--navy) hover:bg-(--surface-soft)">Text Squeaky Clean</a>
-              <a href={siteConfig.contact.phoneHref} className="min-h-12 content-center rounded-full border border-(--blue) text-center font-heading text-sm font-bold text-(--navy)">Call {siteConfig.contact.phone}</a>
+              <a href={siteConfig.contact.smsHref} className="min-h-12 content-center rounded-[7px] border border-(--navy) bg-white text-center font-heading text-base font-bold text-(--navy) hover:bg-(--surface-soft)">Text Squeaky Clean</a>
+              <a href={siteConfig.contact.phoneHref} className="min-h-12 content-center rounded-[7px] border border-(--navy) text-center font-heading text-base font-bold text-(--navy)">Call {siteConfig.contact.phone}</a>
             </div>
           </div>
         </div>

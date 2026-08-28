@@ -1,14 +1,23 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
-import { Manrope, Nunito_Sans } from "next/font/google";
+import { Barlow, Barlow_Condensed } from "next/font/google";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import ScrollToTop from "@/components/layout/ScrollToTop";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
 
-const manrope = Manrope({ variable: "--font-manrope", subsets: ["latin"] });
-const nunitoSans = Nunito_Sans({ variable: "--font-nunito-sans", subsets: ["latin"] });
+const barlow = Barlow({
+  variable: "--font-barlow",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const barlowCondensed = Barlow_Condensed({
+  variable: "--font-barlow-condensed",
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+});
 
 const defaultTitle = "Squeaky Clean Services | Exterior Cleaning in Donnellson, IA";
 
@@ -43,7 +52,7 @@ const localBusinessSchema = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${nunitoSans.variable} h-full antialiased`}>
+    <html lang="en" className={`${barlow.variable} ${barlowCondensed.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema).replace(/</g, "\\u003c") }} />
         <ScrollToTop /><Navbar />{children}<Footer />
