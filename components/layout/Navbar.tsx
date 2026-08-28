@@ -46,7 +46,7 @@ const Navbar = () => {
 
       <div className="mx-auto hidden h-24 w-full max-w-(--container-width) items-center gap-6 px-10 lg:flex">
         <Link href="/" className="flex w-47 shrink-0 items-center" aria-label={`${siteConfig.name} home`}>
-          <Image src="/logo.jpg" alt="Roberts Revive Services logo" width={1024} height={1024} className="size-22 object-contain" sizes="88px" preload />
+          <Image src="/logo.jpg" alt="Roberts Revive Services logo" width={1024} height={1024} className="size-[6.125rem] object-contain" sizes="98px" preload />
         </Link>
         <nav aria-label="Primary navigation" className="ml-auto flex items-center gap-6 xl:gap-8">
           {navigation.map((item) =>

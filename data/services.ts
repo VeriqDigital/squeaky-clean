@@ -51,9 +51,9 @@ export const services = [
     title: "Commercial Exterior Cleaning",
     description:
       "Exterior cleaning for commercial properties that helps businesses maintain a clean and professional appearance.",
-    image: "/truck_with_logo_3.jpg",
+    image: "/truck_with_logo_2.jpg",
     alt: "Branded Squeaky Clean Services work truck at a local job",
-    objectPosition: "center 56%",
+    objectPosition: "center 54%",
   },
   {
     title: "Seasonal Property Maintenance",

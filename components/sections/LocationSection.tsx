@@ -36,10 +36,10 @@ const LocationSection = () => (
 
     <div className="relative min-h-80 overflow-hidden rounded-[10px] border border-(--border) sm:min-h-110 lg:min-h-full">
       <Image
-        src="/truck_with_logo.jpg"
-        alt="Branded Squeaky Clean Services work truck at a Southeast Iowa property"
+        src="/truck_with_logo_3.jpg"
+        alt="Squeaky Clean Services team member in the branded work truck in Southeast Iowa"
         fill
-        className="object-cover object-[center_58%]"
+        className="object-cover object-[center_54%]"
         sizes="(max-width: 1023px) calc(100vw - 2rem), 680px"
       />
     </div>

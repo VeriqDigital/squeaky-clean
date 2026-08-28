@@ -21,7 +21,7 @@ const Hero = () => {
             <h1 className="mt-6 font-heading text-[clamp(3.65rem,7vw,6.35rem)] font-extrabold leading-[0.87] text-(--navy)">
               Bring Your Property Back to Life.
             </h1>
-            <p className="mt-7 max-w-xl text-lg leading-8 text-(--muted) sm:text-xl">
+            <p className="mt-7 max-w-xl text-lg font-medium leading-8 text-(--foreground)/80 sm:text-xl">
               Professional soft washing, roof washing, surface cleaning,
               gutter brightening, window cleaning, and property maintenance
               throughout Southeast Iowa.
