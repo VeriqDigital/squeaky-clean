@@ -30,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: { default: defaultTitle, template: `%s | ${siteConfig.name}` },
     description: siteConfig.description,
     applicationName: siteConfig.name,
-    keywords: ["exterior cleaning Donnellson IA", "house washing Southeast Iowa", "roof washing", "concrete cleaning", "gutter cleaning", "window cleaning", "car detailing", "fleet washing", "Lee County pressure washing", "Des Moines County exterior cleaning"],
+    keywords: ["exterior cleaning Donnellson IA", "soft washing Southeast Iowa", "roof washing", "concrete cleaning", "gutter brightening", "window cleaning", "commercial exterior cleaning", "seasonal property maintenance", "car detailing", "fleet washing", "Lee County pressure washing", "Des Moines County exterior cleaning"],
     robots: { index: true, follow: true },
     openGraph: { title: defaultTitle, description: siteConfig.description, siteName: siteConfig.name, locale: siteConfig.locale, type: "website", images: [{ url: `${origin}/og.png`, width: 1733, height: 909, alt: "Squeaky Clean Services exterior cleaning in Donnellson and Southeast Iowa" }] },
     twitter: { card: "summary_large_image", title: defaultTitle, description: siteConfig.description, images: [`${origin}/og.png`] },
@@ -47,7 +47,7 @@ const localBusinessSchema = {
   email: siteConfig.contact.email,
   address: { "@type": "PostalAddress", streetAddress: siteConfig.location.address, addressLocality: siteConfig.location.businessCity, addressRegion: "IA", postalCode: siteConfig.location.postalCode, addressCountry: "US" },
   areaServed: ["Lee County, Iowa", "Des Moines County, Iowa", "Southeast Iowa"],
-  makesOffer: ["House Washing", "Roof Washing", "Concrete Cleaning", "Gutter Cleaning", "Window Cleaning", "Car Detailing", "Fleet Washing"].map((name) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name } })),
+  makesOffer: ["House & Building Soft Washing", "Concrete & Surface Cleaning", "Roof Washing", "Gutter Cleaning & Brightening", "Window Cleaning", "Deck & Patio Cleaning", "Commercial Exterior Cleaning", "Seasonal Property Maintenance", "Car Detailing", "Fleet Washing"].map((name) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name } })),
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

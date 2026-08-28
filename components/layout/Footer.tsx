@@ -7,12 +7,12 @@ import LeadModal from "./LeadModal";
 import useLeadModal from "./useLeadModal";
 
 const footerServices = [
-  "House Washing",
+  "House & Building Soft Washing",
   "Roof Washing",
-  "Concrete Cleaning",
-  "Gutter Cleaning",
+  "Concrete & Surface Cleaning",
+  "Gutter Cleaning & Brightening",
   "Window Cleaning",
-  "Vehicle & Fleet Cleaning",
+  "Commercial Exterior Cleaning",
 ] as const;
 
 const Footer = () => {
@@ -48,7 +48,7 @@ const Footer = () => {
             </Link>
             <p className="mt-6 max-w-md leading-7 text-(--muted-on-dark)">
               Professional exterior cleaning for homes, businesses, concrete,
-              roofs, windows, vehicles, and fleets across Southeast Iowa.
+              roofs, windows, decks, and patios across Southeast Iowa.
             </p>
             <p className="mt-4 font-heading font-bold text-(--text-on-dark)">
               Local service. Clear communication. Care for your property.

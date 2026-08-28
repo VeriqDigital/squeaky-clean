@@ -6,7 +6,7 @@ export const siteConfig = {
   brandName: "Roberts Revive Services",
   tagline: "Bring Your Property Back to Life.",
   description:
-    "Professional house washing, roof washing, concrete cleaning, gutter cleaning, window cleaning, vehicle detailing, and fleet washing serving Donnellson and Southeast Iowa.",
+    "Professional soft washing, roof washing, concrete and surface cleaning, gutter brightening, window cleaning, and property maintenance serving Donnellson and Southeast Iowa.",
   locale: "en_US",
   location: {
     address: "1410 Highway 2",

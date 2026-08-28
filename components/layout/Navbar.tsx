@@ -45,20 +45,20 @@ const Navbar = () => {
       </div>
 
       <div className="mx-auto hidden h-24 w-full max-w-(--container-width) items-center gap-6 px-10 lg:flex">
-        <Link href="/" className="flex w-45 shrink-0 items-center" aria-label={`${siteConfig.name} home`}>
-          <Image src="/logo.jpg" alt="Roberts Revive Services logo" width={1024} height={1024} className="size-21 object-contain" sizes="84px" preload />
+        <Link href="/" className="flex w-47 shrink-0 items-center" aria-label={`${siteConfig.name} home`}>
+          <Image src="/logo.jpg" alt="Roberts Revive Services logo" width={1024} height={1024} className="size-22 object-contain" sizes="88px" preload />
         </Link>
-        <nav aria-label="Primary navigation" className="ml-auto flex items-center gap-5 xl:gap-7">
+        <nav aria-label="Primary navigation" className="ml-auto flex items-center gap-6 xl:gap-8">
           {navigation.map((item) =>
             "href" in item ? (
-              <Link key={item.href} href={item.href} className="min-h-11 content-center whitespace-nowrap font-heading text-sm font-bold text-(--navy) transition hover:text-(--blue)">{item.label}</Link>
+              <Link key={item.href} href={item.href} className="min-h-11 content-center whitespace-nowrap font-heading text-[0.98rem] font-semibold text-(--navy) transition hover:text-(--blue-hover)">{item.label}</Link>
             ) : (
-              <button key={item.label} type="button" onClick={() => modal.openModal(item.modal)} className="min-h-11 cursor-pointer font-heading text-sm font-bold text-(--navy) hover:text-(--blue)">{item.label}</button>
+              <button key={item.label} type="button" onClick={() => modal.openModal(item.modal)} className="min-h-11 cursor-pointer font-heading text-[0.98rem] font-semibold text-(--navy) hover:text-(--blue-hover)">{item.label}</button>
             ),
           )}
         </nav>
         <div className="flex shrink-0 items-center gap-4 border-l border-(--border) pl-5">
-          <address className="not-italic leading-tight">
+          <address className="hidden not-italic leading-tight xl:block">
             <span className="block text-[0.68rem] font-bold uppercase tracking-[0.12em] text-(--muted)">Call or text</span>
             <a href={siteConfig.contact.phoneHref} className="mt-1 block font-heading text-base font-extrabold text-(--navy) hover:text-(--blue)">{siteConfig.contact.phone}</a>
           </address>

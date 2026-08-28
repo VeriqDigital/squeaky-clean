@@ -1,19 +1,8 @@
 import Image from "next/image";
 import Button from "@/components/ui/Button";
-import { ArrowIcon } from "@/components/ui/Icons";
 import { services } from "@/data/services";
 
 type ServicesSectionProps = { showAll?: boolean; headingAs?: "h1" | "h2" };
-
-const displayedServices = [
-  services[0],
-  services[2],
-  services[1],
-  services[3],
-  services[4],
-  services[5],
-  services[6],
-] as const;
 
 const tileLayouts = [
   "md:col-span-2 lg:col-span-7 lg:row-span-2",
@@ -23,10 +12,14 @@ const tileLayouts = [
   "lg:col-span-3",
   "lg:col-span-3",
   "lg:col-span-3",
+  "md:col-span-2 lg:col-span-12",
+  "lg:col-span-6",
+  "lg:col-span-6",
 ] as const;
 
 const ServicesSection = ({ showAll = false, headingAs = "h2" }: ServicesSectionProps) => {
   const Heading = headingAs;
+  const displayedServices = showAll ? services : services.slice(0, 8);
 
   return (
     <div>
@@ -35,14 +28,22 @@ const ServicesSection = ({ showAll = false, headingAs = "h2" }: ServicesSectionP
           One Local Team. A Cleaner Property.
         </Heading>
         <p className="max-w-lg text-lg leading-8 text-(--muted) lg:justify-self-end">
-          Practical exterior cleaning for homes, hard surfaces, windows,
-          vehicles, and commercial fleets across Southeast Iowa.
+          Exterior cleaning for homes, buildings, hard surfaces, outdoor
+          spaces, and commercial properties across Southeast Iowa.
         </p>
       </div>
 
       <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-12 lg:auto-rows-[17rem]">
         {displayedServices.map((service, index) => {
           const featured = index < 3;
+          const seasonal = index === 7;
+          const imageSizes = index === 0
+            ? "(max-width: 1023px) calc(100vw - 2rem), 700px"
+            : index === 7
+              ? "(max-width: 1023px) calc(100vw - 2rem), 1200px"
+              : index >= 8
+                ? "(max-width: 767px) calc(100vw - 2rem), (max-width: 1023px) 50vw, 600px"
+                : "(max-width: 767px) calc(100vw - 2rem), (max-width: 1023px) 50vw, 430px";
           return (
             <article
               key={service.title}
@@ -53,29 +54,17 @@ const ServicesSection = ({ showAll = false, headingAs = "h2" }: ServicesSectionP
                 alt={service.alt}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-[1.025]"
-                sizes={
-                  index === 0
-                    ? "(max-width: 1023px) calc(100vw - 2rem), 700px"
-                    : "(max-width: 767px) calc(100vw - 2rem), (max-width: 1023px) 50vw, 430px"
-                }
+                style={{ objectPosition: service.objectPosition }}
+                sizes={imageSizes}
               />
-              <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/95 via-black/35 to-black/5" />
               <div className="absolute inset-x-0 bottom-0 p-5 text-white sm:p-6">
-                <h3 className={`font-heading font-extrabold leading-none ${featured ? "text-3xl sm:text-4xl" : "text-2xl sm:text-3xl"}`}>
+                <h3 className={`max-w-2xl font-heading font-extrabold leading-[0.95] ${index === 0 ? "text-3xl sm:text-5xl" : featured || seasonal ? "text-3xl sm:text-4xl" : "text-2xl sm:text-3xl"}`}>
                   {service.title}
                 </h3>
-                {featured ? (
-                  <p className="mt-3 max-w-xl text-sm leading-6 text-white/85 sm:text-base">
-                    {service.description}
-                  </p>
-                ) : (
-                  <a
-                    href="/contact"
-                    className="mt-3 inline-flex min-h-10 items-center gap-2 font-heading text-base font-bold text-(--blue-light) hover:text-white"
-                  >
-                    Get an estimate <ArrowIcon className="size-4" />
-                  </a>
-                )}
+                <p className={`mt-3 text-sm leading-5 text-white/90 sm:leading-6 ${featured || seasonal ? "max-w-2xl sm:text-base" : "line-clamp-3 max-w-sm"}`}>
+                  {service.description}
+                </p>
               </div>
             </article>
           );

@@ -1,45 +1,75 @@
 export const services = [
   {
-    title: "House Washing",
+    title: "House & Building Soft Washing",
     description:
-      "Remove dirt, algae, mildew, and buildup from siding and exterior surfaces without compromising the finish.",
+      "Gentle exterior cleaning for siding and building surfaces designed to remove dirt, algae, mildew, and organic buildup.",
     image: "/house_1_after.jpg",
     alt: "Freshly washed light-colored house exterior with clean siding",
+    objectPosition: "center 48%",
+  },
+  {
+    title: "Concrete & Surface Cleaning",
+    description:
+      "Professional cleaning for driveways, sidewalks, patios, and other hard surfaces to remove dirt and surface buildup.",
+    image: "/ad_3.jpg",
+    alt: "Before-and-after driveway cleaning project showing refreshed concrete",
+    objectPosition: "center 44%",
   },
   {
     title: "Roof Washing",
     description:
-      "Professional roof cleaning designed to remove dark streaks, algae, and organic growth while protecting roofing materials.",
+      "Exterior roof cleaning focused on algae, dark streaks, and organic buildup while treating roofing materials appropriately.",
     image: "/work_1.jpg",
-    alt: "Roberts Revive Services team member working carefully on a roof",
+    alt: "Squeaky Clean Services team member working on a roof",
+    objectPosition: "center 64%",
   },
   {
-    title: "Concrete Cleaning",
+    title: "Gutter Cleaning & Brightening",
     description:
-      "Refresh driveways, sidewalks, patios, and other concrete surfaces by removing years of dirt and buildup.",
-    image: "/ad_3.jpg",
-    alt: "Driveway cleaning project showing a visibly refreshed concrete surface",
-  },
-  {
-    title: "Gutter Cleaning",
-    description:
-      "Clear debris and buildup to help gutters drain properly and keep water moving away from the property.",
+      "Clear debris and exterior buildup to help gutters function properly and improve their appearance.",
     image: "/siding_1_after.jpg",
     alt: "Clean house exterior with refreshed siding, trim, and gutters",
+    objectPosition: "center 28%",
   },
   {
     title: "Window Cleaning",
     description:
-      "Clean exterior windows for a clearer view and a sharper overall appearance.",
+      "Professional exterior window cleaning for a clearer view and cleaner overall appearance.",
     image: "/house_2_after.jpg",
     alt: "Clean home entry and exterior windows after professional washing",
+    objectPosition: "center 43%",
+  },
+  {
+    title: "Deck & Patio Cleaning",
+    description:
+      "Refresh outdoor living areas by removing dirt, organic buildup, and weather-related grime.",
+    image: "/house_4_after.jpg",
+    alt: "Refreshed outdoor area beside a professionally cleaned home",
+    objectPosition: "center 62%",
+  },
+  {
+    title: "Commercial Exterior Cleaning",
+    description:
+      "Exterior cleaning for commercial properties that helps businesses maintain a clean and professional appearance.",
+    image: "/truck_with_logo_3.jpg",
+    alt: "Branded Squeaky Clean Services work truck at a local job",
+    objectPosition: "center 56%",
+  },
+  {
+    title: "Seasonal Property Maintenance",
+    description:
+      "Exterior cleaning and maintenance services that help prepare properties for changing seasons.",
+    image: "/house_3_after.jpg",
+    alt: "Clean home exterior ready for the changing season",
+    objectPosition: "center 46%",
   },
   {
     title: "Car Detailing",
     description:
       "Professional cleaning and detailing that helps restore the appearance of personal vehicles.",
     image: "/truck_with_logo_2.jpg",
-    alt: "Clean Roberts Revive Services vehicle parked at a local property",
+    alt: "Clean branded service vehicle parked at a local property",
+    objectPosition: "center 58%",
   },
   {
     title: "Fleet Washing",
@@ -47,5 +77,6 @@ export const services = [
       "Exterior washing for work vehicles and fleets to help businesses maintain a clean, professional appearance.",
     image: "/truck_with_logo_3.jpg",
     alt: "Roberts Revive Services work truck representing commercial fleet washing",
+    objectPosition: "center 58%",
   },
 ] as const;

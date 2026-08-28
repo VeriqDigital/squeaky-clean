@@ -22,9 +22,9 @@ const Hero = () => {
               Bring Your Property Back to Life.
             </h1>
             <p className="mt-7 max-w-xl text-lg leading-8 text-(--muted) sm:text-xl">
-              Professional house washing, concrete cleaning, roof washing,
-              gutter cleaning, window cleaning, vehicle detailing, and fleet
-              washing throughout Southeast Iowa.
+              Professional soft washing, roof washing, surface cleaning,
+              gutter brightening, window cleaning, and property maintenance
+              throughout Southeast Iowa.
             </p>
             <div className="mt-8 flex flex-col items-stretch gap-4 min-[430px]:flex-row min-[430px]:items-center">
               <Button onClick={() => modal.openModal(primaryCta.modal)}>
