@@ -11,7 +11,7 @@ export const services = [
     title: "Concrete & Surface Cleaning",
     description:
       "Professional cleaning for driveways, sidewalks, patios, and other hard surfaces to remove dirt and surface buildup.",
-    image: "/ad_3.jpg",
+    image: "/concrete_after.jpg",
     alt: "Before-and-after driveway cleaning project showing refreshed concrete",
     objectPosition: "center 44%",
   },
@@ -19,7 +19,7 @@ export const services = [
     title: "Roof Washing",
     description:
       "Exterior roof cleaning focused on algae, dark streaks, and organic buildup while treating roofing materials appropriately.",
-    image: "/work_1.jpg",
+    image: "/roof_cleaning.jpg",
     alt: "Squeaky Clean Services team member working on a roof",
     objectPosition: "center 64%",
   },
@@ -27,7 +27,7 @@ export const services = [
     title: "Gutter Cleaning & Brightening",
     description:
       "Clear debris and exterior buildup to help gutters function properly and improve their appearance.",
-    image: "/siding_1_after.jpg",
+    image: "/gutter_cleanup.jpg",
     alt: "Clean house exterior with refreshed siding, trim, and gutters",
     objectPosition: "center 28%",
   },
@@ -43,7 +43,7 @@ export const services = [
     title: "Deck & Patio Cleaning",
     description:
       "Refresh outdoor living areas by removing dirt, organic buildup, and weather-related grime.",
-    image: "/house_4_after.jpg",
+    image: "/patio-after.jpg",
     alt: "Refreshed outdoor area beside a professionally cleaned home",
     objectPosition: "center 62%",
   },
@@ -51,7 +51,7 @@ export const services = [
     title: "Commercial Exterior Cleaning",
     description:
       "Exterior cleaning for commercial properties that helps businesses maintain a clean and professional appearance.",
-    image: "/truck_with_logo_2.jpg",
+    image: "/commercial_cleaning.jpg",
     alt: "Branded Squeaky Clean Services work truck at a local job",
     objectPosition: "center 54%",
   },
@@ -59,7 +59,7 @@ export const services = [
     title: "Seasonal Property Maintenance",
     description:
       "Exterior cleaning and maintenance services that help prepare properties for changing seasons.",
-    image: "/house_3_after.jpg",
+    image: "/seasonal_maintenance.jpg",
     alt: "Clean home exterior ready for the changing season",
     objectPosition: "center 46%",
   },
