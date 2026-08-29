@@ -3,17 +3,17 @@ export const services = [
     title: "House & Building Soft Washing",
     description:
       "Gentle exterior cleaning for siding and building surfaces designed to remove dirt, algae, mildew, and organic buildup.",
-    image: "/house_1_after.jpg",
-    alt: "Freshly washed light-colored house exterior with clean siding",
-    objectPosition: "center 48%",
+    image: "/NEW_HOUSE_CLEAN.jpg",
+    alt: "Worker cleaning the exterior windows of a large home",
+    objectPosition: "center 50%",
   },
   {
     title: "Concrete & Surface Cleaning",
     description:
       "Professional cleaning for driveways, sidewalks, patios, and other hard surfaces to remove dirt and surface buildup.",
-    image: "/concrete_after.jpg",
-    alt: "Before-and-after driveway cleaning project showing refreshed concrete",
-    objectPosition: "center 44%",
+    image: "/NEW_CONCRETE_CLEANING.jpg",
+    alt: "Concrete surface showing a clear contrast during cleaning",
+    objectPosition: "center 66%",
   },
   {
     title: "Roof Washing",
@@ -43,17 +43,17 @@ export const services = [
     title: "Deck & Patio Cleaning",
     description:
       "Refresh outdoor living areas by removing dirt, organic buildup, and weather-related grime.",
-    image: "/patio-after.jpg",
-    alt: "Refreshed outdoor area beside a professionally cleaned home",
-    objectPosition: "center 62%",
+    image: "/NEW_PATIO_CLEAN.jpg",
+    alt: "Worker cleaning an outdoor brick patio surface",
+    objectPosition: "center 58%",
   },
   {
     title: "Commercial Exterior Cleaning",
     description:
       "Exterior cleaning for commercial properties that helps businesses maintain a clean and professional appearance.",
-    image: "/commercial_cleaning.jpg",
-    alt: "Branded Squeaky Clean Services work truck at a local job",
-    objectPosition: "center 54%",
+    image: "/NEW_COMMERCIAL_CLEANING.jpg",
+    alt: "Worker cleaning a large commercial exterior from a lift",
+    objectPosition: "center 46%",
   },
   {
     title: "Seasonal Property Maintenance",

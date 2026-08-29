@@ -15,11 +15,12 @@ const AboutIntro = ({
         <figure>
           <div className="relative aspect-[3/4] overflow-hidden rounded-[9px] border border-(--border)">
             <Image
-              src="/house_1_before.jpg"
+              src="/NEW_SIDING_BEFORE.jpg"
               alt="House siding before professional exterior washing"
               fill
               sizes="(min-width: 1024px) 26vw, 48vw"
               className="object-cover"
+              style={{ objectPosition: "center 50%" }}
             />
           </div>
           <figcaption className="mt-3 border-l-3 border-(--navy) pl-3 font-heading text-sm font-bold uppercase tracking-[0.08em] text-(--navy)">
@@ -29,11 +30,12 @@ const AboutIntro = ({
         <figure className="mt-8 sm:mt-12">
           <div className="relative aspect-[3/4] overflow-hidden rounded-[9px] border border-(--border)">
             <Image
-              src="/house_1_after.jpg"
+              src="/NEW_SIDING_AFTER.jpg"
               alt="Same house siding after professional exterior washing"
               fill
               sizes="(min-width: 1024px) 26vw, 48vw"
               className="object-cover"
+              style={{ objectPosition: "center 50%" }}
             />
           </div>
           <figcaption className="mt-3 border-l-3 border-(--blue) pl-3 font-heading text-sm font-bold uppercase tracking-[0.08em] text-(--navy)">
