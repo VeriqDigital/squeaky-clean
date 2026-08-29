@@ -14,21 +14,21 @@ export default function Home() {
       <Hero />
       <TrustStrip />
       <Section id="about" tone="white">
-        <AboutIntro />
+        <AboutIntro homepage={true} />
       </Section>
-      <Section id="services" tone="blue">
+      <Section id="services" tone="cream">
         <ServicesSection />
       </Section>
-      <Section id="process" tone="cream">
+      <Section id="process" tone="white" className="border-y border-(--border)">
         <ProcessSection />
       </Section>
-      <Section tone="white">
+      <Section tone="cream">
         <ContactCtaSection />
       </Section>
-      <Section id="service-area" tone="blue">
+      <Section id="service-area" tone="white">
         <LocationSection />
       </Section>
-      <Section id="faq" tone="cream">
+      <Section id="faq" tone="blue">
         <FAQ />
       </Section>
     </main>

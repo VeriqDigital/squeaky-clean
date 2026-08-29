@@ -1,24 +1,42 @@
-import { CalendarIcon, MessageIcon, SparkleIcon } from "@/components/ui/Icons";
-
 const steps = [
-  { title: "Request an Estimate", description: "Tell us what you need cleaned and provide the basic details about your property or vehicle.", Icon: MessageIcon },
-  { title: "We Review the Job", description: "We’ll confirm the scope, answer any questions, and provide clear next steps.", Icon: CalendarIcon },
-  { title: "We Bring It Back to Life", description: "Our team completes the cleaning with attention to detail and respect for your property.", Icon: SparkleIcon },
+  {
+    title: "Request an Estimate",
+    description: "Tell us what you need cleaned and share the basic job details.",
+  },
+  {
+    title: "We Review the Job",
+    description: "We’ll confirm the scope, answer questions, and explain the next step.",
+  },
+  {
+    title: "We Get to Work",
+    description: "Our team completes the cleaning with care and respect for your property.",
+  },
 ] as const;
 
 const ProcessSection = () => (
-  <div>
-    <div className="mx-auto max-w-3xl text-center">
-      <p className="eyebrow">How it works</p>
-      <h2 className="mt-4 font-heading text-[clamp(2.15rem,10vw,4.35rem)] font-extrabold leading-[1.03] tracking-[-0.035em] text-(--navy)">Simple From Start to Finish</h2>
-      <p className="mx-auto mt-5 max-w-2xl leading-7 text-(--muted)">A straightforward process, clear communication, and professional care for your property.</p>
+  <div className="grid gap-10 lg:grid-cols-[0.48fr_1.52fr] lg:gap-16">
+    <div>
+      <h2 className="font-heading text-[clamp(2.9rem,4vw,4.25rem)] font-extrabold leading-[0.92] text-(--navy)">
+        Simple From Start to Finish.
+      </h2>
+      <p className="mt-5 max-w-sm leading-7 text-(--muted)">
+        Clear communication and a straightforward process for every property or vehicle.
+      </p>
     </div>
-    <ol className="relative mt-9 grid gap-4 sm:mt-12 sm:gap-5 lg:grid-cols-3">
-      {steps.map(({ title, description, Icon }, index) => (
-        <li key={title} className="relative rounded-[1.25rem] border border-(--border) bg-white p-5 shadow-(--shadow-sm) sm:rounded-[1.5rem] sm:p-7">
-          <div className="flex items-center justify-between"><span className="flex size-12 items-center justify-center rounded-full bg-(--surface-blue) text-(--blue-hover)"><Icon className="size-6" /></span><span className="font-heading text-sm font-extrabold tracking-[0.16em] text-(--blue-hover)">0{index + 1}</span></div>
-          <h3 className="mt-6 font-heading text-xl font-bold leading-tight text-(--navy) sm:mt-7 sm:text-2xl">{title}</h3>
-          <p className="mt-4 leading-7 text-(--muted)">{description}</p>
+
+    <ol className="grid border-y-2 border-(--navy) lg:grid-cols-3">
+      {steps.map((step, index) => (
+        <li
+          key={step.title}
+          className={`py-7 lg:px-7 lg:py-8 ${index > 0 ? "border-t border-(--border) lg:border-l lg:border-t-0" : ""}`}
+        >
+          <span className="font-heading text-5xl font-extrabold leading-none text-(--blue-hover)">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+          <h3 className="mt-5 font-heading text-2xl font-bold leading-none text-(--navy)">
+            {step.title}
+          </h3>
+          <p className="mt-4 leading-7 text-(--muted)">{step.description}</p>
         </li>
       ))}
     </ol>
