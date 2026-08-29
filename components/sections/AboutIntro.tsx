@@ -1,9 +1,12 @@
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 
-type AboutIntroProps = { headingAs?: "h1" | "h2" };
+type AboutIntroProps = { headingAs?: "h1" | "h2"; homepage?: boolean };
 
-const AboutIntro = ({ headingAs = "h2" }: AboutIntroProps) => {
+const AboutIntro = ({
+  headingAs = "h2",
+  homepage = false,
+}: AboutIntroProps) => {
   const Heading = headingAs;
 
   return (
@@ -52,9 +55,11 @@ const AboutIntro = ({ headingAs = "h2" }: AboutIntroProps) => {
           Expect dependable communication, attention to detail, and respect for
           your property from the first conversation through the finished job.
         </p>
-        <div className="mt-8">
-          <Button href="/about">Our Approach</Button>
-        </div>
+        {homepage && (
+          <div className="mt-8">
+            <Button href="/about">Our Approach</Button>
+          </div>
+        )}
       </div>
     </div>
   );

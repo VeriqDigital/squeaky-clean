@@ -12,15 +12,18 @@ export const metadata: Metadata = {
 const values = [
   {
     title: "Direct communication",
-    description: "Share the job details with a local team and receive clear, practical follow-up.",
+    description:
+      "Share the job details with a local team and receive clear, practical follow-up.",
   },
   {
     title: "Respect for property",
-    description: "Every project starts with care for the surface, surroundings, and scope of work.",
+    description:
+      "Every project starts with care for the surface, surroundings, and scope of work.",
   },
   {
     title: "Attention to detail",
-    description: "From setup through cleanup, the small details are treated as part of the job.",
+    description:
+      "From setup through cleanup, the small details are treated as part of the job.",
   },
 ] as const;
 
@@ -38,7 +41,8 @@ export default function AboutPage() {
             </h2>
             <p className="mt-5 max-w-xl leading-7 text-(--muted)">
               Squeaky Clean Services is built around dependable local service,
-              clear expectations, and careful exterior cleaning for homes and businesses.
+              clear expectations, and careful exterior cleaning for homes and
+              businesses.
             </p>
           </div>
           <div className="grid border-y-2 border-(--navy) md:grid-cols-3">
@@ -50,13 +54,17 @@ export default function AboutPage() {
                 <h3 className="font-heading text-2xl font-bold leading-none text-(--navy)">
                   {value.title}
                 </h3>
-                <p className="mt-4 leading-7 text-(--muted)">{value.description}</p>
+                <p className="mt-4 leading-7 text-(--muted)">
+                  {value.description}
+                </p>
               </article>
             ))}
           </div>
         </div>
       </Section>
-      <Section tone="white"><ContactCtaSection /></Section>
+      <Section tone="white">
+        <ContactCtaSection />
+      </Section>
     </main>
   );
 }

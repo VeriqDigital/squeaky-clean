@@ -14,7 +14,7 @@ export default function Home() {
       <Hero />
       <TrustStrip />
       <Section id="about" tone="white">
-        <AboutIntro />
+        <AboutIntro homepage={true} />
       </Section>
       <Section id="services" tone="cream">
         <ServicesSection />
